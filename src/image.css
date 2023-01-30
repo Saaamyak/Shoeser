@@ -1,0 +1,51 @@
+.image-container{
+    position: relative;
+    padding-top: 70px;
+    width: 100%;
+    height: calc(100vh - 70px);
+    overflow: hidden;
+    flex: 1;
+}
+.svg__bg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+    animation: fadein 0.5s ease-in forwards 1.5s, rotate 15s linear infinite 2s;
+}
+.shoe__image{
+    position: absolute;
+    filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    transform: translate(-50%,-50%) rotate(30deg);
+    opacity: 0;
+    animation: fadein 0.5s ease-in forwards 1.5s, rotateshoe 1s linear forwards 2s;
+}
+@keyframes fadein {
+    from{
+        opacity: 0;
+    } to {
+        opacity: 1;
+    } 
+}
+@keyframes rotate{
+    from{
+        transform: translate(-50%,-50%) rotate(0deg);
+    } to {
+        transform: translate(-50%,-50%) rotate(360deg);
+    }
+}
+
+@keyframes rotateshoe {
+    from{
+        transform: translate(-50%,-50%) rotate(30deg);
+    } to {
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+}
